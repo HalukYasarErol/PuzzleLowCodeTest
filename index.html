@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PowerShell Script Builder</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="puzzle-container">
+        <div class="puzzle-piece" draggable="true" data-command="Copy-Item">Copy Item</div>
+        <div class="puzzle-piece" draggable="true" data-command="-Path">Source Path</div>
+        <div class="puzzle-piece" draggable="true" data-command="-Destination">Destination Path</div>
+        <div class="puzzle-piece" draggable="true" data-command="-Force">Force</div>
+    </div>
+    <div id="script-output"></div>
+    <button onclick="generateScript()">Generate Script</button>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
+
